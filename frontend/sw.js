@@ -2,7 +2,7 @@
    Estrategia: red primero y respaldo en caché, tanto para los archivos de la interfaz como para
    las peticiones GET a la API. Así, cuando se publica una versión nueva, el navegador siempre la
    recibe completa (nunca mezcla un archivo nuevo con otro viejo) y la caché solo se usa sin internet. */
-const VERSION = "aprendo-v30";
+const VERSION = "aprendo-v31";
 const ESTATICOS = ["/", "/index.html", "/css/estilos.css", "/js/api.js", "/js/app.js",
                    "/manifest.json", "/img/icono.svg"];
 

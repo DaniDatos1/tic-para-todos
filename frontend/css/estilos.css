@@ -772,3 +772,8 @@ html.contraste body[data-ancho="acceso"] main { border: 2px solid #fff; }
 dialog { box-sizing: border-box; }
 dialog .fila { display: flex; flex-wrap: wrap; gap: .6rem; }
 dialog .fila .btn { flex: 1 1 140px; min-width: 0; margin: 0; }
+
+/* Menú ☰ (celular y tableta): íconos de tamaño fijo junto al texto */
+.menu button { display: flex; align-items: center; gap: .75rem; text-align: left; }
+.menu button svg { width: 24px; height: 24px; flex: none; color: var(--azul); }
+html.contraste .menu button svg { color: currentColor; }
