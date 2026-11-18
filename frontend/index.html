@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1F4E8C">
+  <meta name="description" content="TIC para Todos: aprenda a usar el celular, el computador e internet paso a paso. Valledupar – Cesar.">
+  <title>TIC para Todos</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="img/icono.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css?v=30">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="barra" role="banner">
+    <button id="btn-atras" class="barra-btn oculto" aria-label="Volver">←</button>
+    <a class="marca" href="#rutas" title="Ir al inicio">
+      <img src="img/icono.svg" alt="" width="46" height="46">
+      <span class="marca-texto"><strong>TIC para Todos</strong><span>Valledupar – Cesar</span></span>
+    </a>
+    <h1 id="titulo-barra">TIC para Todos</h1>
+    <p class="lema" aria-hidden="true">Aprenda <span>•</span> Practique <span>•</span> Conéctese</p>
+    <div class="barra-acciones">
+      <button id="btn-ayuda" class="ayuda" aria-haspopup="dialog">? Ayuda</button>
+      <button id="btn-letra" class="barra-btn" aria-label="A+ aumentar tamaño de letra" title="Tamaño de letra">A+</button>
+      <button id="btn-contraste" class="barra-btn" aria-label="Activar alto contraste" title="Alto contraste" aria-pressed="false"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+      <span id="usuario-chip" class="usuario-chip oculto"></span>
+      <button id="btn-menu" class="barra-btn oculto" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <nav id="menu" class="menu oculto" aria-label="Menú principal"></nav>
+  <nav id="lateral" class="lateral" aria-label="Navegación principal"></nav>
+
+  <main id="contenido" tabindex="-1" aria-live="polite"></main>
+
+
+  <dialog id="dlg-ayuda" aria-labelledby="ayuda-titulo">
+    <h2 id="ayuda-titulo">¿Cómo uso esto?</h2>
+    <p id="ayuda-texto"></p>
+    <div class="fila">
+      <button class="btn btn-sec" id="ayuda-escuchar">🔊 Escuchar</button>
+      <button class="btn" id="ayuda-cerrar">Entendido</button>
+    </div>
+  </dialog>
+
+  <div id="aviso" class="aviso oculto" role="status"></div>
+
+  <script src="js/api.js?v=30"></script>
+  <script src="js/app.js?v=30"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "TIC para Todos – Valledupar",
+  "short_name": "TIC para Todos",
+  "description": "Aprenda a usar el celular, el computador e internet paso a paso. Valledupar – Cesar.",
+  "lang": "es-CO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F7FA",
+  "theme_color": "#1F4E8C",
+  "icons": [
+    { "src": "img/icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,32 @@
+# Despliegue en Render (https://render.com) como "Blueprint": crea el servicio web y la base de
+# datos PostgreSQL gratuita y los conecta entre sí. Render lee este archivo desde el repositorio.
+services:
+  - type: web
+    name: tic-para-todos
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips "*"
+    healthCheckPath: /api/salud
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: SECRET_KEY
+        generateValue: true
+      # Administrador del despliegue público (los usuarios de prueba NO se crean en Render).
+      # Render pide estos dos valores al crear el servicio; no quedan en el repositorio.
+      - key: ADMIN_CELULAR
+        sync: false
+      - key: ADMIN_PIN
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tic-para-todos-db
+          property: connectionString
+
+databases:
+  - name: tic-para-todos-db
+    plan: free
+    databaseName: tic
+    user: tic
