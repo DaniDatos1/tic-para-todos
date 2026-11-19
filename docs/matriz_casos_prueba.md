@@ -1,6 +1,6 @@
 # Matriz de casos de prueba
 
-Ejecución: 2026-11-17. Aprobados: 49 de 49 (100 %).
+Ejecución: 2026-11-18. Aprobados: 49 de 49 (100 %).
 
 | ID | Req. | Descripción | Resultado |
 |---|---|---|---|
